@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0c0c0f;
+  --bg-2: #111116;
+  --bg-3: #16161d;
+  --card: #1a1a24;
+  --border: #252535;
+  --accent: #7c6af7;
+  --accent-2: #a78bfa;
+  --accent-glow: rgba(124, 106, 247, 0.15);
+  --text: #e8e8f0;
+  --text-muted: #7878a0;
+  --text-dim: #4a4a68;
+  --green: #4ade80;
+  --amber: #fbbf24;
+  --rose: #f87171;
+  --cyan: #22d3ee;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-ibm-mono), monospace;
+  --font-display: var(--font-dm-serif), serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::selection { background: var(--accent); color: #fff; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '▋';
+  animation: blink 1.2s step-end infinite;
+  color: var(--accent);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  70%, 100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-ping-slow { animation: ping-slow 2s cubic-bezier(0,0,0.2,1) infinite; }
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(124,106,247,0.15), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}

@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import { DM_Sans, DM_Serif_Display, IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-dm-sans",
+});
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-dm-serif",
+});
+
+const ibmMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-ibm-mono",
+});
+
+export const metadata: Metadata = {
+  title: "Benjamin Kusi — Data Scientist",
+  description: "Data scientist specializing in ML, NLP, and statistical modeling.",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable} ${ibmMono.variable}`}>
+      <body className={dmSans.className}>{children}</body>
+    </html>
+  );
+}
