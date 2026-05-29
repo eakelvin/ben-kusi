@@ -31,10 +31,10 @@ export function Contact() {
 
             <div className="space-y-4">
               {[
-                { label: "Email", val: "kusibenjamin54@gmail.com", href: "mailto:kusibenjamin54@gmail.com", color: "var(--accent)" },
                 { label: "LinkedIn", val: "https://www.linkedin.com/in/benjamin-kusi-631102232/", href: "#", color: "var(--cyan)" },
                 { label: "GitHub", val: "https://github.com/benkusi10", href: "#", color: "var(--green)" },
-                { label: "Twitter / X", val: "@benkusi10", href: "#", color: "var(--amber)" },
+                { label: "Email", val: "kusibenjamin54(@)gmail.com", href: "mailto:kusibenjamin54(@)gmail.com", color: "var(--accent)" },
+                // { label: "Twitter / X", val: "@benkusi10", href: "#", color: "var(--amber)" },
               ].map(l => (
                 <a key={l.label} href={l.href}
                   className="flex items-center gap-4 p-4 rounded-xl transition-all duration-200 group"
