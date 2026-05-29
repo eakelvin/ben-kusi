@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -52,6 +53,7 @@ export function Navbar() {
               </Link>
             );
           })}
+          <ThemeToggle />
           <a href="/resume.pdf"
             className="text-xs px-4 py-2 rounded-lg font-mono transition-all duration-200 hover:opacity-90"
             style={{ background: "var(--accent)", color: "#fff" }}>
@@ -82,7 +84,7 @@ export function Navbar() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${open ? "max-h-96" : "max-h-0"}`}
+        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${open ? "max-h-[34rem]" : "max-h-0"}`}
         style={{ borderTop: open ? "1px solid var(--border)" : "1px solid transparent" }}>
         <div className="px-6 py-4 flex flex-col gap-1">
           {links.map(l => {
@@ -105,6 +107,9 @@ export function Navbar() {
             style={{ background: "var(--accent)", color: "#fff" }}>
             Resume ↗
           </a>
+          <div className="mt-3 pt-3" style={{ borderTop: "1px solid var(--border)" }}>
+            <ThemeToggle variant="block" onPick={() => setOpen(false)} />
+          </div>
         </div>
       </div>
     </nav>
