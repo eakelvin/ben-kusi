@@ -109,39 +109,19 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: Visual terminal card */}
+          {/* Right: Portrait image */}
           <div className="hidden lg:block">
-            <div className="rounded-2xl overflow-hidden" style={{
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/5]" style={{
               background: "var(--card)",
               border: "1px solid var(--border)",
               boxShadow: "0 0 60px rgba(124,106,247,0.1)"
             }}>
-              {/* Terminal header */}
-              <div className="flex items-center gap-2 px-4 py-3" style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-3)" }}>
-                <span className="w-3 h-3 rounded-full" style={{ background: "var(--rose)" }} />
-                <span className="w-3 h-3 rounded-full" style={{ background: "var(--amber)" }} />
-                <span className="w-3 h-3 rounded-full" style={{ background: "var(--green)" }} />
-                <span className="ml-3 text-xs font-mono" style={{ color: "var(--text-dim)" }}>model_eval.py</span>
-              </div>
-              <div className="p-6 font-mono text-xs leading-6" style={{ color: "var(--text-muted)" }}>
-                <div><span style={{ color: "var(--accent-2)" }}>import</span> <span style={{ color: "var(--cyan)" }}>pandas</span> as pd</div>
-                <div><span style={{ color: "var(--accent-2)" }}>from</span> <span style={{ color: "var(--cyan)" }}>sklearn.ensemble</span> <span style={{ color: "var(--accent-2)" }}>import</span> RandomForestClassifier</div>
-                <div className="mt-3"><span style={{ color: "var(--text-dim)" }}># Load & preprocess</span></div>
-                <div>df = pd.read_parquet(<span style={{ color: "var(--green)" }}>&apos;claims_2024.parquet&apos;</span>)</div>
-                <div>X, y = df.drop(<span style={{ color: "var(--green)" }}>&apos;fraud&apos;</span>, axis=<span style={{ color: "var(--amber)" }}>1</span>), df[<span style={{ color: "var(--green)" }}>&apos;fraud&apos;</span>]</div>
-                <div className="mt-3">model = RandomForestClassifier(</div>
-                <div className="ml-4">n_estimators=<span style={{ color: "var(--amber)" }}>500</span>,</div>
-                <div className="ml-4">max_depth=<span style={{ color: "var(--amber)" }}>12</span>,</div>
-                <div className="ml-4">class_weight=<span style={{ color: "var(--green)" }}>&apos;balanced&apos;</span></div>
-                <div>)</div>
-                <div className="mt-3">model.fit(X_train, y_train)</div>
-                <div className="mt-4 p-3 rounded-lg" style={{ background: "rgba(74,222,128,0.06)", border: "1px solid rgba(74,222,128,0.15)" }}>
-                  <div style={{ color: "var(--green)" }}>✓ Training complete</div>
-                  <div>AUC-ROC: <span style={{ color: "var(--green)" }}>0.9847</span></div>
-                  <div>F1 Score: <span style={{ color: "var(--green)" }}>0.9312</span></div>
-                  <div>Precision: <span style={{ color: "var(--green)" }}>0.9621</span></div>
-                </div>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/ben.jpeg"
+                alt="Benjamin Kusi"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
