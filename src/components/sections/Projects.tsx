@@ -1,61 +1,117 @@
 "use client";
 import { useState } from "react";
 
+// const projects = [
+//   {
+//     id: 1,
+//     tag: "Healthcare AI",
+//     title: "Clinical NLP Pipeline",
+//     description: "End-to-end NLP system for extracting structured data from unstructured clinical notes. Processes 2M+ records/day with 94% extraction accuracy.",
+//     tech: ["PyTorch", "spaCy", "BERT", "FastAPI", "Kubernetes"],
+//     metric1: { label: "Accuracy", val: "94.2%" },
+//     metric2: { label: "Throughput", val: "2M+/day" },
+//     color: "var(--cyan)",
+//     status: "Production",
+//     github: "#",
+//     demo: "#",
+//   },
+//   {
+//     id: 2,
+//     tag: "Fintech",
+//     title: "Real-time Fraud Detection",
+//     description: "Ensemble model combining gradient boosting and graph neural networks to detect fraudulent transactions. Reduced false positives by 67% vs previous rule-based system.",
+//     tech: ["LightGBM", "PyG", "Kafka", "Redis", "AWS"],
+//     metric1: { label: "AUC-ROC", val: "0.987" },
+//     metric2: { label: "Latency", val: "<12ms" },
+//     color: "var(--accent-2)",
+//     status: "Production",
+//     github: "#",
+//     demo: "#",
+//   },
+//   {
+//     id: 3,
+//     tag: "Climate Tech",
+//     title: "Carbon Emissions Forecaster",
+//     description: "Spatiotemporal model combining satellite imagery and sensor data to forecast industrial carbon emissions at building-level granularity across 50 cities.",
+//     tech: ["PyTorch", "LSTM", "Sentinel-2", "GeoPandas", "GEE"],
+//     metric1: { label: "RMSE", val: "0.043" },
+//     metric2: { label: "Cities", val: "50" },
+//     color: "var(--green)",
+//     status: "Research",
+//     github: "#",
+//     demo: "#",
+//   },
+//   {
+//     id: 4,
+//     tag: "E-commerce",
+//     title: "Personalization Engine",
+//     description: "Multi-armed bandit + collaborative filtering system powering real-time product recommendations. Increased CTR by 34% and revenue per session by 21%.",
+//     tech: ["TensorFlow", "Apache Spark", "Feast", "Vertex AI"],
+//     metric1: { label: "CTR lift", val: "+34%" },
+//     metric2: { label: "Rev/session", val: "+21%" },
+//     color: "var(--amber)",
+//     status: "Production",
+//     github: "#",
+//     demo: "#",
+//   },
+//   {
+//     id: 5,
+//     tag: "NLP / OSS",
+//     title: "FinSentiment",
+//     description: "Open-source library for financial sentiment analysis. Fine-tuned FinBERT on 500K+ earnings call transcripts. 12K+ GitHub stars, used by 300+ companies.",
+//     tech: ["HuggingFace", "FinBERT", "Python", "PyPI"],
+//     metric1: { label: "GitHub ★", val: "12.4K" },
+//     metric2: { label: "Downloads", val: "2M+/mo" },
+//     color: "var(--rose)",
+//     status: "Open Source",
+//     github: "#",
+//     demo: "#",
+//   },
+//   {
+//     id: 6,
+//     tag: "MLOps",
+//     title: "AutoML Orchestration Platform",
+//     description: "Internal platform for automated hyperparameter tuning, model versioning, and deployment. Reduced model deployment time from 2 weeks to 4 hours.",
+//     tech: ["Ray Tune", "MLflow", "Airflow", "FastAPI", "Terraform"],
+//     metric1: { label: "Deploy time", val: "4hrs" },
+//     metric2: { label: "Models/mo", val: "200+" },
+//     color: "var(--cyan)",
+//     status: "Internal",
+//     github: "#",
+//     demo: "#",
+//   },
+// ];
+
 const projects = [
   {
     id: 1,
-    tag: "Healthcare AI",
-    title: "Clinical NLP Pipeline",
-    description: "End-to-end NLP system for extracting structured data from unstructured clinical notes. Processes 2M+ records/day with 94% extraction accuracy.",
-    tech: ["PyTorch", "spaCy", "BERT", "FastAPI", "Kubernetes"],
-    metric1: { label: "Accuracy", val: "94.2%" },
+    tag: "Quantum Chemistry Neural Network",
+    title: "Predicting Electron Repulsion Integrals (ERIs) & HF Energy",
+    description: "Accelerating Quantum Chemistry with Neural Networks: Predicting Electron Repulsion Integrals for Hartree - Fock Calculations.Trained solely on methane(CH4) and ethane(CH3CH3) in the minimal STO- 3G basis, the model(ERINet) predicts the 140, 185 ERIs of propane(CH3CH2CH3) with R2 > 0.94 and median absolute error near chemical accuracy(1 kcal / mol)",
+    tech: ["Pyscf", "swiss activation function", "huber loss",],
+    metric1: { label: "RMSE", val: "94%" },
     metric2: { label: "Throughput", val: "2M+/day" },
     color: "var(--cyan)",
-    status: "Production",
-    github: "#",
+    status: "Research",
+    github: "https://github.com/benkusi10/Predicting-Electron-Repulsion-Integrals-ERIs-HF-Energy",
     demo: "#",
   },
+
   {
     id: 2,
-    tag: "Fintech",
-    title: "Real-time Fraud Detection",
-    description: "Ensemble model combining gradient boosting and graph neural networks to detect fraudulent transactions. Reduced false positives by 67% vs previous rule-based system.",
-    tech: ["LightGBM", "PyG", "Kafka", "Redis", "AWS"],
-    metric1: { label: "AUC-ROC", val: "0.987" },
-    metric2: { label: "Latency", val: "<12ms" },
-    color: "var(--accent-2)",
-    status: "Production",
-    github: "#",
-    demo: "#",
-  },
-  {
-    id: 3,
-    tag: "Climate Tech",
-    title: "Carbon Emissions Forecaster",
-    description: "Spatiotemporal model combining satellite imagery and sensor data to forecast industrial carbon emissions at building-level granularity across 50 cities.",
-    tech: ["PyTorch", "LSTM", "Sentinel-2", "GeoPandas", "GEE"],
-    metric1: { label: "RMSE", val: "0.043" },
-    metric2: { label: "Cities", val: "50" },
-    color: "var(--green)",
-    status: "Research",
-    github: "#",
-    demo: "#",
-  },
-  {
-    id: 4,
-    tag: "E-commerce",
-    title: "Personalization Engine",
-    description: "Multi-armed bandit + collaborative filtering system powering real-time product recommendations. Increased CTR by 34% and revenue per session by 21%.",
+    tag: "Data Analytics",
+    title: "Telecom Customer Churn Prediction",
+    description: "MCustomers in the telecom industry can choose from a variety of service providers and actively switch from one to the next. The telecommunications business has an annual churn rate of 15-25 percent in this highly competitive market.",
     tech: ["TensorFlow", "Apache Spark", "Feast", "Vertex AI"],
     metric1: { label: "CTR lift", val: "+34%" },
     metric2: { label: "Rev/session", val: "+21%" },
     color: "var(--amber)",
     status: "Production",
-    github: "#",
+    github: "https://github.com/benkusi10/Telecom-Customer-Churn-Prediction/blob/main/README.md",
     demo: "#",
   },
   {
-    id: 5,
+    id: 3,
     tag: "NLP / OSS",
     title: "FinSentiment",
     description: "Open-source library for financial sentiment analysis. Fine-tuned FinBERT on 500K+ earnings call transcripts. 12K+ GitHub stars, used by 300+ companies.",
@@ -64,22 +120,10 @@ const projects = [
     metric2: { label: "Downloads", val: "2M+/mo" },
     color: "var(--rose)",
     status: "Open Source",
-    github: "#",
+    github: "https://github.com/benkusi10/Natural-Language-Processing-",
     demo: "#",
   },
-  {
-    id: 6,
-    tag: "MLOps",
-    title: "AutoML Orchestration Platform",
-    description: "Internal platform for automated hyperparameter tuning, model versioning, and deployment. Reduced model deployment time from 2 weeks to 4 hours.",
-    tech: ["Ray Tune", "MLflow", "Airflow", "FastAPI", "Terraform"],
-    metric1: { label: "Deploy time", val: "4hrs" },
-    metric2: { label: "Models/mo", val: "200+" },
-    color: "var(--cyan)",
-    status: "Internal",
-    github: "#",
-    demo: "#",
-  },
+
 ];
 
 const statusColor: Record<string, string> = {
@@ -128,14 +172,14 @@ export function Projects() {
               <p className="text-xs leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>{p.description}</p>
 
               {/* Metrics */}
-              <div className="grid grid-cols-2 gap-3 mb-5">
+              {/* <div className="grid grid-cols-2 gap-3 mb-5">
                 {[p.metric1, p.metric2].map(m => (
                   <div key={m.label} className="p-2.5 rounded-lg text-center" style={{ background: "var(--bg-3)", border: "1px solid var(--border)" }}>
                     <div className="text-base font-mono font-medium" style={{ color: p.color }}>{m.val}</div>
                     <div className="text-xs mt-0.5" style={{ color: "var(--text-dim)" }}>{m.label}</div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-1.5 mb-5">

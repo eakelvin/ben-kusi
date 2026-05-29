@@ -31,8 +31,8 @@ export function Contact() {
 
             <div className="space-y-4">
               {[
-                { label: "LinkedIn", val: "https://www.linkedin.com/in/benjamin-kusi-631102232/", href: "#", color: "var(--cyan)" },
-                { label: "GitHub", val: "https://github.com/benkusi10", href: "#", color: "var(--green)" },
+                { label: "LinkedIn", val: "https://www.linkedin.com/in/benjamin-kusi-631102232/", href: "https://www.linkedin.com/in/benjamin-kusi-631102232/", color: "var(--cyan)" },
+                { label: "GitHub", val: "https://github.com/benkusi10", href: "https://github.com/benkusi10", color: "var(--green)" },
                 { label: "Email", val: "kusibenjamin54(@)gmail.com", href: "mailto:kusibenjamin54(@)gmail.com", color: "var(--accent)" },
                 // { label: "Twitter / X", val: "@benkusi10", href: "#", color: "var(--amber)" },
               ].map(l => (
@@ -47,7 +47,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-mono" style={{ color: "var(--text-dim)" }}>{l.label}</div>
-                    <div className="text-sm mt-0.5 group-hover:underline" style={{ color: "var(--text)" }}>{l.val}</div>
+                    {/* <div className="text-sm mt-0.5 group-hover:underline" style={{ color: "var(--text)" }}>{l.val}</div> */}
                   </div>
                 </a>
               ))}
