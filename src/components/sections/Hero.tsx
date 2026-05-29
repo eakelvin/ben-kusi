@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const roles = ["Machine Learning Engineer", "Data Scientist", "NLP Researcher", "Statistical Modeler"];
 
@@ -78,18 +79,18 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3">
-              <a href="#projects"
+              <Link href="/projects"
                 className="px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-90"
                 style={{ background: "var(--accent)", color: "#fff" }}>
                 View Projects
-              </a>
-              <a href="#contact"
+              </Link>
+              <Link href="/contact"
                 className="px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
                 style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }}
-                onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = "var(--accent)"; (e.target as HTMLElement).style.color = "var(--text)"; }}
-                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = "var(--border)"; (e.target as HTMLElement).style.color = "var(--text-muted)"; }}>
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)"; (e.currentTarget as HTMLElement).style.color = "var(--text)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; (e.currentTarget as HTMLElement).style.color = "var(--text-muted)"; }}>
                 Get in touch
-              </a>
+              </Link>
             </div>
 
             {/* Stats */}
