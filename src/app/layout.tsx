@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable} ${ibmMono.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${dmSans.variable} ${dmSerif.variable} ${ibmMono.variable}`}>
       <body className={dmSans.className}>
         <Navbar />
         <main>{children}</main>

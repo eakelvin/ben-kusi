@@ -23,7 +23,7 @@ export function Contact() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           <div>
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
               Open to senior IC and staff roles in ML/data science, as well as consulting engagements for model auditing, ML strategy, and production ML architecture.
@@ -55,7 +55,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl p-8" style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
+          <div className="rounded-2xl p-6 sm:p-8" style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
             {sent ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12">
                 <div className="w-14 h-14 rounded-full mb-4 flex items-center justify-center"

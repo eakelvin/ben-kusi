@@ -94,7 +94,7 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="flex gap-8 mt-14 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
+            <div className="flex flex-wrap gap-x-8 gap-y-5 mt-14 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
               {[
                 { val: "5+", label: "Years exp." },
                 { val: "23", label: "Projects shipped" },

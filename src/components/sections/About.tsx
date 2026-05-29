@@ -10,7 +10,7 @@ export function About() {
           <h2 className="font-display text-4xl lg:text-5xl">The story so far</h2>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-16 items-start">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-3 space-y-5">
             <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               I&apos;m a data scientist with a deep belief that <span style={{ color: "var(--text)" }}>good models should be explainable, fair, and actually deployed</span> — not stuck in Jupyter notebooks. I started my journey studying applied mathematics at UC Berkeley, where I fell in love with the intersection of statistics and computation.
