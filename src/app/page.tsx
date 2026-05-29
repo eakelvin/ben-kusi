@@ -6,19 +6,19 @@ import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
+import { Blog } from "@/components/sections/Blog";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-
       <Hero />
       <About />
       <Projects />
       <Skills />
-      <Experience />
+      <Blog />
+      {/* <Experience /> */}
       <Contact />
-
       <Footer />
     </main>
   );
