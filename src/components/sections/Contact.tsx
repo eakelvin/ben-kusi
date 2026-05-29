@@ -33,7 +33,7 @@ export function Contact() {
               {[
                 { label: "LinkedIn", val: "https://www.linkedin.com/in/benjamin-kusi-631102232/", href: "https://www.linkedin.com/in/benjamin-kusi-631102232/", color: "var(--cyan)" },
                 { label: "GitHub", val: "https://github.com/benkusi10", href: "https://github.com/benkusi10", color: "var(--green)" },
-                { label: "Email", val: "kusibenjamin54(@)gmail.com", href: "mailto:kusibenjamin54(@)gmail.com", color: "var(--accent)" },
+                { label: "Email", val: "kusibenjamin54(@)gmail.com", href: "mailto:kusibenjamin54@gmail.com", color: "var(--accent)" },
                 // { label: "Twitter / X", val: "@benkusi10", href: "#", color: "var(--amber)" },
               ].map(l => (
                 <a key={l.label} href={l.href}

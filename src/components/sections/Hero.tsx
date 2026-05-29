@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const roles = ["Machine Learning Engineer", "Data Scientist", "NLP Researcher", "Statistical Modeler"];
+const roles = ["Machine Learning Engineer", "Data Scientist", "NLP Researcher", "Statistical Modeler", "Data Engineer", "Data Consultant", "AI Integration", "IT Infrastructure Support", "AI Researcher"];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -94,7 +94,7 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-x-8 gap-y-5 mt-14 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
+            {/* <div className="flex flex-wrap gap-x-8 gap-y-5 mt-14 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
               {[
                 { val: "5+", label: "Years exp." },
                 { val: "23", label: "Projects shipped" },
@@ -106,7 +106,7 @@ export function Hero() {
                   <div className="text-xs mt-0.5" style={{ color: "var(--text-dim)" }}>{s.label}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Right: Portrait image */}
