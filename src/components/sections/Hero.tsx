@@ -61,8 +61,8 @@ export function Hero() {
             </div>
 
             <h1 className="font-display text-5xl lg:text-7xl mb-4 leading-[1.05]" style={{ color: "var(--text)" }}>
-              Benjamin<br />
-              <span style={{ color: "var(--accent-2)" }}>Kusi</span>
+              CodeWith<br />
+              <span style={{ color: "var(--accent-2)" }}>Benjamin</span>
             </h1>
 
             <div className="h-8 mb-6 flex items-center">
