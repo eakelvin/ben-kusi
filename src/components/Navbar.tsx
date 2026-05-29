@@ -52,7 +52,7 @@ export function Navbar() {
               </Link>
             );
           })}
-          <a href="/resume.pdf"
+          <a href="#"
             className="text-xs px-4 py-2 rounded-lg font-mono transition-all duration-200 hover:opacity-90"
             style={{ background: "var(--accent)", color: "#fff" }}>
             Resume ↗
@@ -99,7 +99,7 @@ export function Navbar() {
               </Link>
             );
           })}
-          <a href="/resume.pdf"
+          <a href="#"
             onClick={() => setOpen(false)}
             className="mt-2 text-xs px-4 py-2.5 rounded-lg font-mono text-center transition-all duration-200 hover:opacity-90"
             style={{ background: "var(--accent)", color: "#fff" }}>
