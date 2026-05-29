@@ -28,19 +28,12 @@ export const metadata: Metadata = {
   description: "Data scientist specializing in ML, NLP, and statistical modeling.",
 };
 
-const themeInitScript = `try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      data-theme="midnight"
-      suppressHydrationWarning
       className={`${dmSans.variable} ${dmSerif.variable} ${ibmMono.variable}`}>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body className={dmSans.className}>
         <Navbar />
         <main>{children}</main>
