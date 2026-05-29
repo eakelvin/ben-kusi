@@ -38,7 +38,7 @@ export function Navbar() {
       }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
         <Link href="/" className="font-mono text-sm" style={{ color: "var(--accent-2)" }}>
-          CodeWithBenjamin<span className="cursor-blink" />
+          AnalyzeWithBenjamin<span className="cursor-blink" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
