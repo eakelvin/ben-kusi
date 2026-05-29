@@ -7,21 +7,22 @@ const skillGroups = [
     color: "var(--accent)",
     skills: [
       { name: "PyTorch", level: 95 },
-      { name: "scikit-learn", level: 98 },
-      { name: "Transformers (HF)", level: 90 },
-      { name: "XGBoost/LightGBM", level: 96 },
-      { name: "MLflow", level: 88 },
+      { name: "Scikit-learn", level: 98 },
+      { name: "TensorFlow", level: 90 },
+      { name: "Regression", level: 96 },
+      { name: "Classification", level: 88 },
+      { name: "Clustering", level: 80 },
     ],
   },
   {
-    label: "Data Engineering",
+    label: "Data Analysis",
     color: "var(--cyan)",
     skills: [
-      { name: "Apache Spark", level: 85 },
-      { name: "dbt", level: 90 },
-      { name: "Airflow", level: 82 },
-      { name: "BigQuery", level: 92 },
-      { name: "Kafka", level: 78 },
+      { name: "Pandas", level: 98 },
+      { name: "NumPy", level: 90 },
+      { name: "Excel", level: 88 },
+      { name: "Data Cleaning", level: 80 },
+      { name: "Data Visualization", level: 78 },
     ],
   },
   {
@@ -31,8 +32,7 @@ const skillGroups = [
       { name: "Python", level: 99 },
       { name: "SQL", level: 96 },
       { name: "R", level: 80 },
-      { name: "Julia", level: 70 },
-      { name: "Bash", level: 85 },
+      { name: "C++", level: 85 },
     ],
   },
   {
@@ -44,6 +44,37 @@ const skillGroups = [
       { name: "Terraform", level: 75 },
       { name: "Vertex AI", level: 80 },
       { name: "GitHub Actions", level: 90 },
+    ],
+  },
+  {
+    label: "Visualization Tools",
+    color: "var(--accent)",
+    skills: [
+      { name: "Power BI", level: 95 },
+      { name: "Tableau", level: 98 },
+      { name: "Matplotlib", level: 90 },
+      { name: "Seaborn", level: 88 },
+      { name: "Plotly", level: 80 },
+    ],
+  },
+  {
+    label: "Databases",
+    color: "var(--accent)",
+    skills: [
+      { name: "MySQL", level: 95 },
+      { name: "PostgreSQL", level: 98 },
+      { name: "BigQuery", level: 90 },
+    ],
+  },
+  {
+    label: "Business Analysis",
+    color: "var(--cyan)",
+    skills: [
+      { name: "Business Analysis", level: 95 },
+      { name: "KPI Reporting", level: 98 },
+      { name: "Dashboard Design", level: 90 },
+      { name: "Requirements Gathering", level: 88 },
+      { name: "Data Storytelling", level: 80 },
     ],
   },
 ];
@@ -122,7 +153,7 @@ export function Skills() {
             </div>
 
             {/* Certifications */}
-            <div className="mt-10">
+            {/* <div className="mt-10">
               <div className="text-xs font-mono mb-4" style={{ color: "var(--text-muted)" }}>Certifications</div>
               <div className="space-y-3">
                 {[
@@ -140,7 +171,7 @@ export function Skills() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
