@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const roles = ["Machine Learning Engineer", "Data Scientist", "NLP Researcher", "Statistical Modeler", "Data Engineer", "Data Consultant", "AI Integration", "IT Infrastructure Support", "AI Researcher"];
+const roles = ["Data Scientist", "Machine Learning Engineer", "NLP Researcher", "Statistical Modeler", "Data Engineer", "Data Consultant", "AI Integration", "IT Infrastructure Support", "AI Researcher"];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
