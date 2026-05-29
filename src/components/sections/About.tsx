@@ -13,16 +13,33 @@ export function About() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-3 space-y-5">
             <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              I&apos;m a data scientist with a deep belief that <span style={{ color: "var(--text)" }}>good models should be explainable, fair, and actually deployed</span> — not stuck in Jupyter notebooks. I started my journey studying applied mathematics at UC Berkeley, where I fell in love with the intersection of statistics and computation.
+              {/* I&apos;m a data scientist with a deep belief that <span style={{ color: "var(--text)" }}>good models should be explainable, fair, and actually deployed</span> — not stuck in Jupyter notebooks. I started my journey studying applied mathematics at UC Berkeley, where I fell in love with the intersection of statistics and computation. */}
+              I am a data-driven IT professional with experience in Data Analytics, Business Intelligence, Artificial Intelligence, Neural Networks, Machine Learning and IT Infrastructure management. I specialize in turning complex data into actionable insights and building reliable systems that support business performance.
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Over five years, I&apos;ve had the privilege of working on problems that matter: <span style={{ color: "var(--text)" }}>predicting disease risk for millions of patients, stopping financial fraud in milliseconds, and helping companies understand their carbon footprint</span> down to the building level.
+              {/* Over five years, I&apos;ve had the privilege of working on problems that matter: <span style={{ color: "var(--text)" }}>predicting disease risk for millions of patients, stopping financial fraud in milliseconds, and helping companies understand their carbon footprint</span> down to the building level. */}
+              Currently, I am a Research Engineer Intern at the Institut de Chimie Physique (Université Paris-Saclay / CNRS), where I apply machine learning and Python to improve computational efficiency. This role has strengthened my analytical thinking and problem-solving skills in technical environments.
             </p>
+            <div className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              <p className="mb-3">Previously, I:</p>
+              <ul className="space-y-2">
+                {[
+                  "Coordinated IT infrastructure for 100+ users across multiple departments.",
+                  "Managed networks, system upgrades, and IT operations.",
+                  "Built dashboards and data models to drive procurement decisions.",
+                  "Delivered data insights with measurable impact.",
+                ].map(item => (
+                  <li key={item} className="flex gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "var(--accent)" }} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              I care deeply about the full ML lifecycle — from data quality and feature engineering to monitoring model drift in production. I believe the unglamorous parts of data science are often the most impactful.
-            </p>
-            <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Outside of work, I&apos;m contributing to open-source ML tooling, co-authoring a chapter in an upcoming O&apos;Reilly book on production ML, and learning to make very mediocre sourdough.
+              {/* Outside of work, I&apos;m contributing to open-source ML tooling, co-authoring a chapter in an upcoming O&apos;Reilly book on production ML, and learning to make very mediocre sourdough. */}
+              I bring a strong combination of technical expertise (Python, SQL, Power BI, systems administration) and business understanding.
+              I will be available for a CDI role in France or anywhere in Europe from July onwards, seeking opportunities in Data Science, Business Analytics, or IT Infrastructure.
             </p>
           </div>
 
@@ -33,16 +50,16 @@ export function About() {
               <div className="space-y-4">
                 {[
                   {
-                    degree: "M.S. Statistics",
-                    school: "Stanford University",
-                    year: "2019",
+                    degree: "MSC DATA SCIENCE AND BUSINESS ANALYTICS",
+                    school: "EDC PARIS BUSINESS SCHOOL",
+                    year: "2024-2026",
                     note: "Concentration: ML & Data Science"
                   },
                   {
-                    degree: "B.S. Applied Mathematics",
-                    school: "UC Berkeley",
-                    year: "2017",
-                    note: "Minor: Computer Science"
+                    degree: "BSC COMPUTER SCIENCE",
+                    school: "UNIVERSITY OF ENERGY AND NATURAL RESOURCES",
+                    year: "2014-2018",
+                    note: "Major: Computer Science"
                   },
                 ].map(e => (
                   <div key={e.degree} className="flex gap-3">
@@ -58,7 +75,7 @@ export function About() {
             </div>
 
             {/* Publications */}
-            <div className="rounded-xl p-5" style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
+            {/* <div className="rounded-xl p-5" style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
               <div className="text-xs font-mono mb-4" style={{ color: "var(--cyan)" }}>PUBLICATIONS</div>
               <div className="space-y-3">
                 {[
@@ -76,7 +93,7 @@ export function About() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
