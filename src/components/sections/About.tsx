@@ -18,7 +18,7 @@ export function About() {
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               {/* Over five years, I&apos;ve had the privilege of working on problems that matter: <span style={{ color: "var(--text)" }}>predicting disease risk for millions of patients, stopping financial fraud in milliseconds, and helping companies understand their carbon footprint</span> down to the building level. */}
-              Currently, I am a Research Engineer Intern at the Institut de Chimie Physique (Université Paris-Saclay / CNRS), where I apply machine learning and Python to improve computational efficiency. This role has strengthened my analytical thinking and problem-solving skills in technical environments.
+              Currently based in <span style={{ color: "var(--text)" }}>Paris, France</span>, I am a Research Engineer Intern at the Institut de Chimie Physique (Université Paris-Saclay / CNRS), where I apply machine learning and Python to improve computational efficiency. This role has strengthened my analytical thinking and problem-solving skills in technical environments.
             </p>
             <div className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <p className="mb-3">Previously, I:</p>

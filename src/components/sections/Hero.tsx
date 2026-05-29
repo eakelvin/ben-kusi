@@ -51,14 +51,24 @@ export function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            {/* Status badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8 text-xs font-mono"
-              style={{ background: "rgba(74,222,128,0.08)", border: "1px solid rgba(74,222,128,0.2)", color: "var(--green)" }}>
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: "var(--green)" }} />
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ background: "var(--green)" }} />
-              </span>
-              Available for opportunities
+            {/* Status badges */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono"
+                style={{ background: "rgba(74,222,128,0.08)", border: "1px solid rgba(74,222,128,0.2)", color: "var(--green)" }}>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: "var(--green)" }} />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ background: "var(--green)" }} />
+                </span>
+                Available for opportunities
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono"
+                style={{ background: "rgba(34,211,238,0.08)", border: "1px solid rgba(34,211,238,0.2)", color: "var(--cyan)" }}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Paris, France
+              </div>
             </div>
 
             <h1 className="font-display text-5xl lg:text-7xl mb-4 leading-[1.05]" style={{ color: "var(--text)" }}>
