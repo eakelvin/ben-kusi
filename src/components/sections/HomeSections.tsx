@@ -98,7 +98,7 @@ function SectionHead({
 const experiences = [
   {
     period: "Now",
-    role: "Research Engineer Intern",
+    role: "AI Research Engineer Intern",
     place: "Institut de Chimie Physique · CNRS / Paris-Saclay",
     detail:
       "Applying machine learning and Python to improve computational efficiency in quantum chemistry research.",
@@ -234,9 +234,9 @@ export function HomeSections() {
             <SectionHead
               label="02 / EXPERIENCE"
               title="Where I&apos;ve worked"
-              subtitle="A short snapshot — education, roles, and impact live on the about page."
-              href="/about"
-              cta="Full background"
+              subtitle="A short snapshot — roles, impact, and details live on the experience page."
+              href="/experience"
+              cta="View experience"
             />
           </Reveal>
           <div className="relative">
