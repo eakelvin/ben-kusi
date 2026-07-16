@@ -52,7 +52,7 @@ export function Navbar() {
               </Link>
             );
           })}
-          <a href="#"
+          <a href="https://cvdesignr.com/p/6a0da679820ba" target="_blank" rel="noopener noreferrer"
             className="text-xs px-4 py-2 rounded-lg font-mono transition-all duration-200 hover:opacity-90"
             style={{ background: "var(--accent)", color: "#fff" }}>
             Resume ↗
