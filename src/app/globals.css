@@ -83,3 +83,27 @@ body {
 .font-display {
   font-family: var(--font-display);
 }
+
+/* Homepage polish */
+.home-cta:hover {
+  border-color: var(--accent) !important;
+  background: rgba(124, 106, 247, 0.12) !important;
+  color: var(--text) !important;
+}
+
+.home-cta:hover .home-cta-arrow {
+  transform: translateX(3px);
+}
+
+.home-project {
+  border-color: var(--border);
+}
+
+.home-project + .home-project,
+.home-sections .divide-y > * + * {
+  border-top: 1px solid var(--border);
+}
+
+.home-post:hover {
+  background: var(--card) !important;
+}
